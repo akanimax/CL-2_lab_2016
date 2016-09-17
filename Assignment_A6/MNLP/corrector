@@ -1,0 +1,27 @@
+#!/home/botman/Programming/Platforms/anaconda2/bin/python
+
+''' Coded by botMan '''
+''' Reference: http://norvig.com/spell-correct.html (Great Man ("Peter Norvig") and great Website)'''
+
+import sys # for using the command line arguments
+import re # python's regular expressions library
+from spellcheck import correct # correct function for spell correction
+ 
+
+
+files = sys.argv[1:]
+
+for filer in files:
+	with open(filer, "r") as text:
+		print "file: " + filer + " (original misspelled text:)\n" 
+		blob = text.read()
+		print blob
+		print "\n\n\n\n"
+		
+		words = re.sub("[^\w]", " ",  blob).split()
+		corrected_words = map(lambda x: correct(x), words)		
+		corrected_blob  = reduce(lambda x,y: x + " " + y, corrected_words)
+		
+		print "file: " + filer + " (Corrected text:)\n" 
+		print corrected_blob
+		print "\n\n\n\n"

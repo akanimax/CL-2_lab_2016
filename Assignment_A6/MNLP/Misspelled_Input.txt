@@ -1,0 +1,9 @@
+Heav yuo ever been realyl impressed with Googles 'Did yuo mena....' spell chceker? Haev yuo evre just tpyed smoething into google to help yuo with your spleling?
+
+My awnser to teh above questions avboe wolud be Yse, all teh tmie!
+
+In a fantastic post I raed soem yeasr aog Peter Norivg outilned how Google’s ‘did you mean’ spelilng corrector uses probbailtiy tehory, lrage training stes and some elegatn sttaistcial langugae proecssing to be so effcetiev. Tyep in a seacrh like 'splein'g and Google cmoes bcak in 0.1 secnods or so with Did you mena: 'spelilng'. Below is a toy spelling corrector in python taht achieves 80 to 90% accuracy and is veyr fats. It's written in a fantsiaclly impressvie 21 lines of coed. It uess list comprehesnions, and soem of my fvaorite daat structures (sets and default dicitonaries).
+
+Teh code adn supporting data files can be fonud in my hcaks pbulci reop under teh spellcehck foeldr.
+
+Teh data sede cmose frmo a bgi.txt flie taht consisst of aobut a mililon worsd. Teh feil is a concatentaion of severla public domain books from Project Gutenbreg adn lisst of mots frequnet words fmro Witkionray and the British Natoinal Corpus. It uess a simpel tarniing mehtod of just cuontnig the occurrences of eahc word in the big txet fiel. Obviously Googel has a lot more daat to sede thsi spellnig chekcer wtih but I was suprised at how effective thsi relatively small seed wsa.
