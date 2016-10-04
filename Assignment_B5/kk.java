@@ -6,8 +6,8 @@ ii. weight
 iii. age
 iv. IQ
 Formulate the data for 40 children to form 3 clusters.
-Class: BE			Div: B
-Roll No.: 56		Batch: Q4
+Class: BE		Div: 4
+Roll No.: 4431		Batch: Q4
 */
 
 import java.io.*;
@@ -18,7 +18,8 @@ public static void main(String args[])
 {
 int N=40;
 int arr[]={2,4,10,12,3,20,30,11,25,56,76,45,35,65,2,34,12,21,34,65,45,34,23,12,65,45,34,78,67,54,32,12,66,99,76,56,45,78,67,56};
-int i,m1,m2,m3,a,b,c,n=0;
+int i, n=0; 
+double m1,m2,m3,a,b,c;
 boolean flag=true;
 float sum1=0,sum2=0, sum3=0;
 a=arr[0];b=arr[1]; c=arr[2];
@@ -57,14 +58,16 @@ do
         sum3=sum1+cluster3[i];
     a=m1;
     b=m2;
-    c=m3;	
-    m1=Math.round(sum1/k);
+    c=m3;
+	
+    m1=(sum1/k);
     m2=Math.round(sum2/j);
     m3=Math.round(sum3/l);
-    if(m1==a && m2==b && m3==c)
-        flag=false;
-    else
+    
+    if(((m1 - a)/m1 <= 0.001) && ((m2 - b)/m2 <= 0.001) && ((m3 - c)/m3 <= 0.001))
         flag=true;
+    else
+        flag=false;
 
     System.out.println("\nAfter iteration "+ n +" , cluster 1 :\n");    
     for(i=0;i<40;i++)

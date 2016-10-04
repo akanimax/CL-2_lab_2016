@@ -1,0 +1,71 @@
+Enter a paragraph:
+What cities are in China?
+
+
+
+Step 1: Preprocessing
+Involves Processing of text
+
+
+Tokenizing Text into Sentences
+The sentences are:
+What cities are in China?
+
+
+Tokenizing Sentences into Words
+The words are:
+['What', 'cities', 'are', 'in', 'China', '?']
+
+
+Step 2: Lexical Analysis
+
+Essentially refers to dictionary and obtains the properties of the word
+Part-Of-Speech tagging
+The tagset is:
+
+What->WP
+cities->NNS
+are->VBP
+in->IN
+China->NNP
+?->.
+
+
+The acurracy of the trained pos tagger is:
+0.985805169499
+
+
+
+Step 4: Syntax Analysis
+
+(S
+  (SBAR-NOM-SBJ
+    (WHNP-28 (WP What))
+    (S (NP-SBJ-59 (NNS cities)) (VP (VBP are))))
+  (VP (NN in) (NP-PRD (NNP China)))
+  (. ?))
+(S
+  (SBAR-NOM-SBJ
+    (WHNP-28 (WP What))
+    (S (NP-SBJ-59 (NNS cities)) (VP (VBP are))))
+  (VP (NN in) (NP-PRD (NP (NNP China))))
+  (. ?))
+(S
+  (SBAR-NOM-SBJ
+    (WHNP-28 (WP What))
+    (S (NP-SBJ-59 (NNS cities)) (VP (VBP are))))
+  (VP (NN in) (NP-PRD (NP (NP (NNP China)))))
+  (. ?))
+
+
+
+Step 4: Semantic Analysis
+
+NLP processing complete!!
+The SQL Query so formed is:
+
+SELECT City FROM city_table WHERE Country="china"
+
+
+Good BYE
+

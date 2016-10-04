@@ -1,0 +1,20 @@
+botman@botmatrix:~/Programming/College/CL-2_lab_2016/Assignment_C1$ python NER.py 
+
+
+========Welcome=========
+
+
+This is the named entities picker
+Enter Text: I live in Pune. India is my nation. I was born in Nagpur. Harshali is very regular with her work. My name is Animesh Karnewar. Doctor Deshpande is a renowned cardiologist.
+
+
+Detected named entities are: 
+['Harshali', 'Animesh Karnewar', 'India', 'Nagpur', 'Doctor Deshpande']
+
+
+GOOD BYE! 
+
+
+
+botman@botmatrix:~/Programming/College/CL-2_lab_2016/Assignment_C1$ 
+
